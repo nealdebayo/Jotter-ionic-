@@ -1,0 +1,43 @@
+<div style="background: #fff; z-index: -1; width: 100vw; height: 100vh; position: absolute; top:0px;left: 0px"></div>
+
+<div class="wn-header">
+<div class="logonback">
+	<div class="back-btn-div">
+		<ion-button class="back-btn ion-activatable" (click)="goBack()">
+			<ion-ripple-effect></ion-ripple-effect>
+			<ion-icon name="arrow-round-back"></ion-icon>
+		</ion-button>
+	</div>
+	<div class="logo">
+		<!-- <ion-icon name="list-box"></ion-icon>Nealdebayos -->
+	</div>
+</div>
+<div class="save-btn-div">
+	<ion-button class="save-btn ion-activatable" (click)="updateChanges()">
+		<ion-ripple-effect></ion-ripple-effect>
+		<ion-icon name="save"></ion-icon>Save
+	</ion-button>
+	<ion-button class="cancel-btn ion-activatable" (click)="goBack()">
+		<ion-ripple-effect></ion-ripple-effect>
+		<ion-icon name="close"></ion-icon>
+	</ion-button>
+</div>
+</div>
+
+<div class="wn-content">
+	<ion-content class="notes" [scrollEvents]="false">
+
+		<!-- Textarea in an item with a floating label -->
+		<ion-item>
+		  <ion-textarea [(ngModel)] = "newTitle" [value]="currentNote.title" [readonly]="shouldReadOnly" (click)="toggleReadOnly()"></ion-textarea>
+		</ion-item>
+		<br><br>
+		<!-- Textarea with custom number of rows and cols -->
+		<ion-item>
+		  <ion-textarea rows="7" cols="20" [value] = "currentNote.noteContent" [readonly] = "shouldReadOnly" 
+		  (click)="toggleReadOnly()" [(ngModel)] = "newContent" placeholder="Enter any notes here..."></ion-textarea>
+		</ion-item>
+
+	</ion-content>
+</div>
+

@@ -1,0 +1,33 @@
+<div class="home-header">
+<p><ion-icon name="list-box"></ion-icon>Nealdebayos</p>
+</div>
+<div class="home-content">
+<ion-content class="notes" [scrollEvents]="true">
+  <div class="n">
+    <div class="ion-activatable" *ngFor="let note of allNotes" [id] = "note.id">
+      <ion-card class="eachNote" (click) = "viewNote(note.id)">
+      <ion-ripple-effect [type] = "'bounded'" [id] = "note.id"></ion-ripple-effect>
+      <div class="titlentime">
+        <div class="title" style="width: 150px; overflow-x: hidden; white-space: nowrap">
+          {{ note.title }}
+        </div>
+        <div class="time">
+          <button (click) = "deleteNote($event, note.id, note.title)" class="delete ion-activatable">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon name="trash"></ion-icon>
+          </button>
+          {{ note.time }}
+        </div>
+      </div>
+      <hr>
+      <div class="note-content">
+        <p>{{ note.note }}</p>
+      </div>
+      </ion-card>
+    </div>
+  </div>
+  <ion-fab class="add-btn-div" (click) = "writeNote()">
+    <ion-fab-button class="add-btn"><ion-icon name="add"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>
+</div>

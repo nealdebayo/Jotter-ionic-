@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.otf');
+}
+@font-face {
+    font-family: 'MontserratL';
+    src: url('../fonts/Montserrat-UltraLight.otf');
+}
+
+.wn-header{
+	background-color: #00368e;
+	position: fixed;
+	width: 100vw;
+	color: white;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: -2px 2px 14px #00235e;
+}
+
+.logo{
+	font-size: 26px;
+	font-weight: 400;
+	margin-left: 10px;
+	margin-top: 6px;
+	ion-icon{
+			position: relative;
+			top: 2px;
+		}
+}
+
+.wn-content {
+	overflow-y: scroll !important;
+}
+
+.logonback{
+	display: flex;
+}
+
+
+.notes {
+	font-family: 'MontserratL';
+	position: absolute;
+	width: 90vw;
+	top: 120px;
+	left: 5vw;
+	--background: transparent;
+	/*--offset-bottom: 240px;*/
+	--padding-bottom: 100px;
+}
+
+.save-btn, .cancel-btn{
+	margin-left: 10px;
+	--background: transparent;
+}
+.back-btn{
+	--background: transparent;
+}
+
+

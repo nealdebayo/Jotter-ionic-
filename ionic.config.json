@@ -1,0 +1,7 @@
+{
+  "name": "Nealdebayos",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
